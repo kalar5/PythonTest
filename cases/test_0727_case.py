@@ -13,23 +13,21 @@ class TestCase(unittest.TestCase):
         print("测试开始")
 
     def tearDown(self):
-        # 关闭打开的页面
-        self.driver.close()
         # 关闭浏览器
-        self.driver.exit()
-   
+        self.driver.quit()
+
     # @classmethod
-    # def setUpClass(self):
+    # def setUpClass(cls):
     #     # 用例执行之前初始化driver
-    #     self.driver = webdriver.Chrome(executable_path="./drivers/chromedriver.exe")
+    #     cls.driver = webdriver.Chrome(executable_path="./drivers/chromedriver.exe")
     #     print("测试开始")
 
     # @classmethod
-    # def tearDownClass(self):
+    # def tearDownClass(cls):
     #     # 关闭打开的页面
-    #     self.driver.close()
+    #     cls.driver.close()
     #     # 关闭浏览器
-    #     self.driver.exit()
+    #     cls.driver.exit()
 
     def test_01(self):
         self.driver.get("https://www.baidu.com")

@@ -10,7 +10,8 @@ def find_element(driver="", By="xpath", Value=""):
     if By == "link_text"
         return driver.find_element_by_link_text(Value)
 
-def find_elements():
+
+def find_elements(driver="", By="xpath", Value=""):
     if By == "id"
         return driver.find_elements_by_id(Value)
     if By == "name"
@@ -22,7 +23,7 @@ def find_elements():
      if By == "link_text"
         return driver.find_elements_by_link_text(Value)
 
-def send_key(obj,value=""):
+def send_keys(obj,value=""):
     try:
         obj.send_keys(value)
     except:

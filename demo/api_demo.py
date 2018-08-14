@@ -28,6 +28,10 @@ def login():
         response['data'] = {"token": "adjkasjdkdjkasjdklajskldja23135dgsgd"}
         response['msg'] = "登陆成功"
         return jsonify(response)
+    elif username == "" and password == "":
+        response['code'] = 400
+        response['msg'] = "账号或密码不能为空"
+        return jsonify(response)
     else:
         response['code'] = 400
         response['msg'] = "账号或密码错误"
@@ -35,4 +39,4 @@ def login():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True)

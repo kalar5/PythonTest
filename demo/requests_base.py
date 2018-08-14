@@ -40,7 +40,7 @@ import requests
 #     print(response.text)
 
 
-def post1():
+def post():
     url = "http://www.itblacklist.top:2333/login"
     data = {}
     data["username"] = "admin"
@@ -55,9 +55,9 @@ def post1():
         return None
 
 
-def post2():
+def post1():
     url = "http://www.itblacklist.top:2333/chicktoken"
-    token = post1()
+    token = post()
     data = {}
     data["token"] = token
     res = requests.post(url, data)
@@ -68,4 +68,4 @@ def post2():
 
 
 if __name__ == "__main__":
-    post2()
+    post1()
